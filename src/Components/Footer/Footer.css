@@ -1,0 +1,119 @@
+.footer{
+    background-color: #20304f;
+    color: #fff;
+    padding:30px 40px;
+}
+.footer .p{
+    text-align: center;
+    margin-top: 20px;
+}
+.footer-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-flex div{
+    width: 40%;
+}
+.footer-left{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-left h2{
+    margin: 20px 0px;
+    font-size: 35px;
+    font-style: italic;
+}
+.footer-left a{
+    text-decoration: none;
+    color: #fff;
+}
+.footer-left div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+.footer-left div a{
+    font-size: 13px;
+}
+.centere{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.span-one{
+    height: 1px;
+    width: 200px;
+    margin: auto;
+    background-color: gray;
+}
+.span-two{
+    height: 1.5px;
+    width: 350px;
+    margin: auto;
+    background-color: #fff;
+}
+.one{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 25px;
+    position: relative;
+}
+.one i{
+    transition: 0.5s;
+    cursor: pointer;
+}
+.one i:hover {
+    color: blue;
+}
+.two{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+}
+.two div{
+    display: flex;
+    align-items: center;
+    flex-direction: row !important;
+    gap: 5px;
+    width: 100%;
+    margin: auto;
+    font-size: 12px;
+}
+.two div img{
+    width: 20px;
+}
+@media screen and (max-width: 768px) {
+    .footer-flex {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 20px;
+    }
+    .footer-flex div{
+        width: 100%;
+    }
+    .footer-left div{
+        justify-content: center;
+    }
+    .two{ 
+        flex-wrap: wrap !important;
+    }
+    .two div{
+        justify-content: center;
+    }
+    .span-two{
+        height: 1.5px;
+        width: 250px;
+        margin: auto;
+        background-color: #fff;
+    }
+}

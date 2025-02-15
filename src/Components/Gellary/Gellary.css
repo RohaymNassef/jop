@@ -1,0 +1,140 @@
+.hex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin:0px auto;
+    background-color: #1b2537;
+  }
+  .top{
+    display: flex;
+    gap: 7px;
+    margin-top: 70px;
+  }
+  .center{
+    display: flex;
+    gap: 7px;
+  }
+  .bottom{
+    display: flex;
+    gap: 7px;
+  }
+  .hex-grid .bottom{
+    margin-bottom: 70px;
+  }
+  .hex {
+    width: 120px;
+    height: 135px;
+    background-color: #000;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: #000 solid 5px;
+    transition: 0.5s;
+    perspective: 1000px;
+    /* animation */
+    display: inline-block;
+    position: relative;
+    transition: transform 1s ease-in-out;
+  }
+  .hex.animate {
+    animation: moveScaleRotate 1.5s ease-in-out;
+    z-index: 10;
+    position: absolute;
+    left: 38%;
+    top: 107%;
+  }
+  @keyframes moveScaleRotate {
+    0% {
+      transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+    50% {
+      transform: translate(50px, -50px) scale(4) rotateY(180deg);
+      width: 280px;
+      margin: auto !important;
+    }
+    100% {
+      transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+  }
+
+  .hex img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    filter: grayscale(80%);
+    transition: transform 1s ease-in-out;
+  }
+  .hex img:hover{
+    filter: grayscale(0);
+  }
+.rotatable {
+
+  transition: transform 0.5s ease-in-out;
+}
+
+.rotated {
+  transform: rotateY(360deg);
+}
+.expanded {
+  transform: scale(1.1);
+  
+}
+  @media screen and (min-width:481px) and (max-width: 768px) {
+    .hex {
+        width: 90px;
+        height: 100px;
+    }
+    .hex-grid {
+        gap: 5px;
+    }
+    .hex.animate{
+      left: 35% !important;
+      top: 58% !important;
+    }
+    @keyframes moveScaleRotate {
+      0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+      }
+      50% {
+        transform: translate(50px, -50px) scale(4) rotateY(180deg);
+        width: 200px !important;
+        margin: auto !important;
+      }
+      100% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+      }
+    }
+}
+
+@media screen  and (max-width: 480px) {
+    .hex {
+        width: 70px;
+        height: 80px;
+    }
+    .hex-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hex.animate{
+      left: 23%;
+      top: 50% !important;
+    }
+    @keyframes moveScaleRotate {
+      0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+      }
+      50% {
+        transform: translate(50px, -50px) scale(4) rotateY(180deg);
+        width: 100px;
+        margin: auto !important;
+      }
+      100% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+      }
+    }
+}

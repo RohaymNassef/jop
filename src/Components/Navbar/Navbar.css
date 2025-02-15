@@ -1,0 +1,26 @@
+.nav{
+    background: linear-gradient(to right, #5D0E7F, #121E35);
+    /* height: 100px; */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.nav-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.logo{
+    width: 100px;
+    height: auto;
+}
+.nav-right h2{
+    transition: 0.5s;
+    cursor: pointer;
+    font-size: clamp(16px, 2vw, 22px);
+}
+.nav-right h2:hover{
+    color: #f9d549;
+}
